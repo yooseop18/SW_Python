@@ -23,3 +23,5 @@ class MyStack:
 
     def empty(self):
         return len(self.q) == 0
+
+# 큐를 추가적으로 공부하기
