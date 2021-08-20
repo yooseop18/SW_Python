@@ -24,4 +24,4 @@ class MyStack:
     def empty(self):
         return len(self.q) == 0
 
-# 큐를 추가적으로 공부하기
+# 큐, 스택 부분 추가적으로 공부한 뒤 추가하기
