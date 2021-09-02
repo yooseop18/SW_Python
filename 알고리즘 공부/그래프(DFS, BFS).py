@@ -12,6 +12,7 @@ graph = {
 # DFS(재귀함수 이용)
 
 # 재귀 함수 사용 시, 인자 값에 (discovered) 입력받지 않는 새로운 변수를 선언해서 사용하면 재귀로 사용가능
+# 리턴 리스트에 노드를 추가하고, 더이상 연결되어 있지 않으면 본 함수로 return
 def recursive_dfs(v, discovered=[]):
     discovered.append(v)
     for w in graph[v]:

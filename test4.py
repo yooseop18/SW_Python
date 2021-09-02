@@ -1,11 +1,5 @@
-N = 6
-M = 3
+a = [1, 2, 3, 4, 5, 1, 2, 3]
 
-dic = {}
-for n in range(1, N + 1):
-    dic[n] = 0
+a.pop(3)
 
-if M in dic:
-    dic[M] += 1
-
-print(dic)
+print(a)
