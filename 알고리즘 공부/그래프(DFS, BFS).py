@@ -10,6 +10,8 @@ graph = {
 
 
 # DFS(재귀함수 이용)
+
+# 재귀 함수 사용 시, 인자 값에 (discovered) 입력받지 않는 새로운 변수를 선언해서 사용하면 재귀로 사용가능
 def recursive_dfs(v, discovered=[]):
     discovered.append(v)
     for w in graph[v]:
@@ -33,7 +35,7 @@ def iterative_dfs(start_v):
     return discovered
 
 
-#BFS -> 무조건 큐를 이용해야함
+# BFS -> 무조건 큐를 이용해야함
 def iterative_bfs(start_v):
     discovered = [start_v]
     queue = [start_v]
