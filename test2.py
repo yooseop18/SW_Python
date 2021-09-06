@@ -1,33 +1,29 @@
-# DFS 방식으로 구현
-def letter_comb(digits: str) -> list[str]:
-    def dfs(index, path):
+def test2(arr, target):
+    result = []
 
-        if len(path) == len(digits):
+    # path = 지금까지의 경로 : list
+    def dfs(csum, index, path):
+        if csum < 0:
+            return
+
+        if csum == 0:
             result.append(path)
             return
 
-        for i in range(index, len(digits)):
-            print(dic[digits[i]])
-            for j in dic[digits[i]]:
-                dfs(i + 1, path + j)
-    # 예외 처리
-    if not digits:
-        return []
+        for i in range(index, len(arr)):
+            dfs(csum - arr[i], i, path + [arr[i]])
 
-    dic = {
-        "2": "abc", "3": "def", "4": "ghi", "5": "jkl",
-        "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"
-    }
-    result = []
-    dfs(0, "")
+    dfs(target, 0, [])
 
     return result
 
 
 def main():
-    digits = "23"
-    answer = letter_comb(digits)
-    print(answer)
+    candidate = [2, 3, 6, 7]
+    target = 7
+
+    print(f'{test2(candidate, target)}')
 
 
-main()
+if __name__ == '__main__':
+    main()
