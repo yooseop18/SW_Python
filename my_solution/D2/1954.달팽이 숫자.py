@@ -1,3 +1,5 @@
+# SWEA 제출 시 def 에 설명 추가하면 안됨
+
 def test3(N: int) -> list[int]:
     def snail_arr(num, start):
         check_arr = []
