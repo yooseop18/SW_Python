@@ -7,10 +7,12 @@
 # 0 0 1 0
 
 n, m = map(int, input().split())
-
+# map 함수로 입력받기
 my_list = [list(map(int, input().split())) for _ in range(n)]
-
+# for 문으로 입력받기
+my_list1 = [list(int(x) for x in input().split()) for _ in range(n)]
 print(my_list)
+print(my_list1)
 
 #####################
 # 단순 행, 열만 입력 받으려면 이게 제일 간단함
