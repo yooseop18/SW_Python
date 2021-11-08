@@ -11,11 +11,10 @@ def test3(N, arr):
 
         # arr[i] 과 나머지 값 차이 중 가장 작은 값이 조망권 확보 세대
         center_val = new_arr.pop(2)
-        find_min_arr = []
-        for k in new_arr:
-            find_min_arr.append(center_val - k)
-        # cnt 값에 갱신
-        cnt += min(find_min_arr)
+        for k in range(len(new_arr)):
+            new_arr[k] = center_val - new_arr[k]
+        # cnt 에 합산
+        cnt += min(new_arr)
 
     return cnt
 
